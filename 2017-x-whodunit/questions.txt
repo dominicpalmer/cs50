@@ -1,0 +1,12 @@
+1.  stdint,h is a header file in the C std library allowing typedefs specifying exact width integer types, using macros.
+2.  To allow use of integer types of an exact size, e.g. usint8_t is exactly 8 bytes long.
+3.  BYTE: 1 byte, DWORD: 4 bytes, LONG: 4 bytes, WORD: 2 bytes.
+4.  WORD called bfType which specifies the file type. For BITMAP it must be BM (0x4d42).
+5.  bfSize is the total size in bytes of the bitmap file. biSize is the size of the bitmap file minus the bytes used for the BITMAPHEADER and BITMAPINFO
+6.  When biHeight is negative the bitmap is interpreted from the top of the file down, with the first RGBTRIPLE in the top left.
+7.  biBitCount.
+8.  If either the infile doesn't exist, or the outfile cannot be created.
+9.  The 1 refers to the number of elements to be read. In our case we treat BITMAPINFO and BITMAPHEADER as 1 element each.
+10. 3
+11. Moves the file position to a desired location within the file.
+12. Specifies that the padding offset is a count of characters from the current file position.

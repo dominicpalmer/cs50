@@ -1,0 +1,13 @@
+0.  A word that is 45 characters long, the max length accepted.
+1.  Gets resource usage.
+2.  16.
+3.  Passing big structs by value takes up a lot of stack memory and is slow.
+4.  Main opens the text file, and iterates through every character in the file. It creates a word buffer for appending
+the characters that are alphabetical only, and uses a loop system to form full words. It also ignores strings of
+characters that are too long to be words, and ignores alphanumerical strings. Once the word is complete, it is
+completed with a null entry, then the words counter is updated, and finally the word is passed into the spellchecker.
+5.  Using scanf could cause problems because in text files, there is not always one distinguishing factor that defines
+what each word is. For example, a word could follow a space or a hyphen, could end with a newline or some punctuation.
+The text files are not formatted in a way that allows the use of scanf.
+6.  Because it is important the dictionary and contents of the text file to be checked are not altered once data has started to be
+pass in and entered/checked.

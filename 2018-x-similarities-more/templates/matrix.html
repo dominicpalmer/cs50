@@ -1,0 +1,32 @@
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th></th><th></th><th></th>
+            {% for i in s2 %}
+                <th>{{ i }}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th></th><th></th>
+            {% for i in range(0, len(s2)+1) %}
+                <th>{{ i }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th></th><th>0</th>
+            {% for i in matrix[0] %}
+                <th>{{ i[0] }}</th>
+            {% endfor %}
+        </tr>
+        {% for j in range(0, len(s1)) %}
+            <tr>
+                <th>{{s1[t]}}</th><th>{{j + 1}}</th>
+                {% for i in matrix[j + 1] %}
+                    <td>{{ i[0] }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
