@@ -48,7 +48,7 @@ void cracker3(char* hash)
 {
     for (int i = 0; i < 52 ; i++)
     {
-         for (int j = 0; j < 52 ; j++)
+        for (int j = 0; j < 52 ; j++)
         {
             for (int k = 0; k < 52 ; k++)
             {
@@ -91,18 +91,18 @@ void cracker4(char* hash)
 int main(int argc, char* argv[])
 {
     //check theres only 1 command line argument
-	if ( argc != 2 )
-	{
-		printf("Usage: ./crack hash");
-		return 1;
-	}
+    if ( argc != 2 )
+    {
+        printf("Usage: ./crack hash");
+        return 1;
+    }
 
-	//check the command line argument is 13 characters long
-	if ( strlen(argv[1]) != 13 )
-	{
-		printf("Usage: ./crack hash");
-		return 1;
-	}
+    //check the command line argument is 13 characters long
+    if ( strlen(argv[1]) != 13 )
+    {
+        printf("Usage: ./crack hash");
+        return 1;
+    }
 
     //run the exclusive crackers in turn, exiting when one of them finds the password
     cracker1(argv[1]);

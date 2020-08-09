@@ -49,23 +49,23 @@ def cracker4(hash):
 
 def main():
     #check theres only 1 command line argument
-	if len(sys.argv) != 2:
-		sys.exit("Usage: ./crack hash")
+    if len(sys.argv) != 2:
+        sys.exit("Usage: ./crack hash")
 
-	#check the command line argument is 13 characters long
-	if len(sys.argv[1]) != 13:
-		sys.exit("Usage: ./crack hash")
+    #check the command line argument is 13 characters long
+    if len(sys.argv[1]) != 13:
+        sys.exit("Usage: ./crack hash")
 
-	hash = sys.argv[1]
+    hash = sys.argv[1]
 
-	#run the exclusive crackers in turn, exiting when one of them finds the password
-	cracker1(hash)
-	cracker2(hash)
-	cracker3(hash)
-	cracker4(hash)
+    #run the exclusive crackers in turn, exiting when one of them finds the password
+    cracker1(hash)
+    cracker2(hash)
+    cracker3(hash)
+    cracker4(hash)
 
-	#if none of the crackers find the password, print result
-	sys.exit("Password not found. Was the input a real DES hash?")
+    #if none of the crackers find the password, print result
+    sys.exit("Password not found. Was the input a real DES hash?")
 
 if __name__ == "__main__":
     main()
